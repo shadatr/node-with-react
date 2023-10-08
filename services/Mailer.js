@@ -19,8 +19,8 @@ class Mailer {
       port: 465,
       secure: true,
       auth: {
-        user: "shadadaab26@gmail.com", // Your Gmail email address
-        pass: "ukjl hwfj qkgs hwwd", // Your Gmail password or app-specific password
+        user: keys.gmailUser, // Your Gmail email address
+        pass: keys.gmailPass, // Your Gmail password or app-specific password
       },
     });
 
