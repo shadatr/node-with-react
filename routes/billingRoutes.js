@@ -1,12 +1,10 @@
-const keys= require('../config/keys')
+const keys= require('../config/dev')
 const stripe = require('stripe')(keys.stripeScretKey)
 const requireLogin= require('../middlewares/requireLogin')
 
 module.exports = app =>{
     app.post('/api/stripe',requireLogin, async (req,res)=>{
-        if(!req.user){
-            return res.status(410).send({error: "you must login!"})
-        }
+
         const charge= await stripe.charges.create({
             amount: 500,
             currency: 'usd',
