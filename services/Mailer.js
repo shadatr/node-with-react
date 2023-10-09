@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const keys = require("../config/dev");
+const keys = require("../config/keys");
 
 class Mailer {
   constructor({ subject, recipients }, content) {
