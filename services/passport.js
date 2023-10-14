@@ -24,17 +24,17 @@ passport.use(
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
-      const existingUser = await User.findOne({ googleId: profile.id }).maxTime(10000) // Set a longer timeout value in milliseconds
-      .exec((err, doc) => {
-        console.log(err)
-      });;
+      const existingUser = await User.findOne({ googleId: profile.id })
+      
 
       if (existingUser) {
         return done(null, existingUser);
+      }else{
+        const user = await new User({ googleId: profile.id }).save();
+        done(null, user);
+
       }
 
-      const user = await new User({ googleId: profile.id }).save();
-      done(null, user);
     }
   )
 );
