@@ -12,7 +12,6 @@ module.exports = (app) => {
   })
 
   app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
-    console.log(req.body)
     const { title, subject, body, recipients
     } = req.body;
     const survey = new Survey({
