@@ -19,14 +19,14 @@ class Mailer {
       port: 465,
       secure: true,
       auth: {
-        user: keys.gmailUser, // Your Gmail email address
-        pass: keys.gmailPass, // Your Gmail password or app-specific password
+        user: keys.gmailUser,
+        pass: keys.gmailPass,
       },
     });
 
     for (const recipient of this.recipients) {
       const mailOptions = {
-        from: "shadadaab@gmail.com", // Your sender email address
+        from: "shadadaab26@gmail.com", // Your sender email address
         to: recipient, // The recipient's email address
         subject: this.subject,
         html: this.content,
@@ -36,7 +36,7 @@ class Mailer {
         const info = await transporter.sendMail(mailOptions);
         console.log("Email sent:", info.response);
       } catch (error) {
-        console.error("Error sending email:", error);
+        console.log("Error sending email:", error);
         throw error;
       }
     }
