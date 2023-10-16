@@ -1,0 +1,16 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body{
+    margin: auto;
+
+}
+
+.App{
+    background: url(./images/backgroud.jpg);
+    font-family: 'Alata', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
