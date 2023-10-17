@@ -1,16 +1,9 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import Payments from "./Payments";
+import React from 'react'
 
-class Header extends Component {
-
-  render() {
-    return (
-      <div className="flex items-center justify-center w-[100%] p-8">
-      <div className={`border border-gray4 text-gray1 inline-flex items-center py-[14px] px-[24px] rounded-[40px] list-none text-[18px] ${this.props.auth? 'gap-[74px]':'gap-[114px]'}`}>
-        <Link to={"/"} className="">
-          <svg
+const Footer = () => {
+  return (
+    <div className='bg-primary w-[100%] h-[200px]'>
+        <svg
             width="111"
             height="19"
             viewBox="0 0 111 19"
@@ -22,37 +15,11 @@ class Header extends Component {
               fill="#00A7DC"
             />
           </svg>
-        </Link>
-        {this.props.auth ? (
-            [<li key="1"><a href="#about">About</a></li>,
-            <li key="2">Pricing</li>,
-            <li key="3">Contact us</li>,
-            <li key="4">my surveys</li>,
-            <li key="5">
-              Credits: {this.props.auth.credits}{"  "}
-              <Payments />
-            </li>,
-            <li key="7" className="text-primary py-2 px-4 bg-secondary rounded-[40px]">
-              <a href="/api/logout">Logout</a>
-            </li>]
+          <span>
             
-        ) : ([
-            <li key="1"><Link to="#about">About</Link></li>,
-            <li key="2">Pricing</li>,
-            <li key="3">Contact us</li>,
-            <li key="4" className="text-primary py-2 px-4 bg-secondary rounded-[40px]">
-              <a href="/auth/google" >Sign in with google</a>
-            </li>]
-        )}
-      </div>
-
-      </div>
-    );
-  }
+          </span>
+    </div>
+  )
 }
 
-function mapStateToProps({ auth }) {
-  return { auth };
-}
-
-export default connect(mapStateToProps)(Header);
+export default Footer

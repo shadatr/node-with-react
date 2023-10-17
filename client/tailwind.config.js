@@ -12,9 +12,10 @@ module.exports = {
         gray1: "#D9D9D9",
         gray2: "#6A6767",
         gray3: "#302D2D",
-        blue1: "#0085FF",
-        blue2: "#0C1241",
-        blue3: "#0A0D21",
+        gray4: "#FFFFFF57",
+        blue1: "#00A7DC",
+        blue2: "#A1E3F9",
+        
       },
       fontSize: {
         xlg: "30px",
