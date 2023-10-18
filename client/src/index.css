@@ -2,6 +2,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'materialize-css/dist/css/materialize.min.css';
 
 body{
     margin: auto;
