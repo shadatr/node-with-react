@@ -17,8 +17,6 @@ module.exports = (app) => {
 
   app.get("/api/surveys/:surveyId/:choice", async (req, res) => {
     const { surveyId, choice } = req.params;
-    console.log(surveyId);
-    console.log(choice);
 
     if (choice === "yes" || choice === "no") {
       // Handle the 'Yes' or 'No' vote here
@@ -91,6 +89,7 @@ module.exports = (app) => {
         await survey.save();
         req.user.credits -= 1;
         const user = await req.user.save();
+        res.redirect('/')
         res.send(user);
       } catch (err) {
         res.status(422).send(err);

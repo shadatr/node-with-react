@@ -7,6 +7,7 @@ import Header from './Header';
 import Dashboard from './Dashboard'
 import SurveyNew from './surveys/SurveyNew';
 import Footer from './Footer';
+import { Toaster } from "react-hot-toast";
 
 class App extends Component {
   componentDidMount() {
@@ -25,7 +26,9 @@ class App extends Component {
             </Routes>
           </div>
         </BrowserRouter>
+        <Toaster position="bottom-right" reverseOrder={false} />
         <Footer/>
+
       </div>
     );
   }

@@ -15,7 +15,8 @@ module.exports = {
         gray4: "#FFFFFF57",
         blue1: "#00A7DC",
         blue2: "#A1E3F9",
-        
+        blue3: "#05022C",
+        blue4: "#30F",
       },
       fontSize: {
         xlg: "30px",
