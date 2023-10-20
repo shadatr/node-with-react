@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-const keys = require('./config/dev');
+const keys = require('./config/keys');
 const bodyParser= require('body-parser')
 require('./models/User');
 require('./models/Survey');
