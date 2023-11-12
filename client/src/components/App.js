@@ -19,10 +19,10 @@ class App extends Component {
       <div className="">
         <BrowserRouter>
           <div>
-            <Routes> {/* Wrap Routes around Route components */}
-              <Route path="/" element={<Landing />} /> {/* Use 'element' prop */}
-              <Route exact path="/surveys" element={<Dashboard />} /> {/* Use 'element' prop */}
-              <Route path="/surveys/new" element={<SurveyNew />} /> {/* Use 'element' prop */}
+            <Routes> 
+              <Route path="/" element={<Landing />} /> 
+              <Route exact path="/surveys" element={<Dashboard />} />
+              <Route path="/surveys/new" element={<SurveyNew />} /> 
             </Routes>
           </div>
         </BrowserRouter>

@@ -26,7 +26,7 @@ class Mailer {
 
     for (const recipient of this.recipients) {
       const mailOptions = {
-        from: "shadadaab26@gmail.com", // Your sender email address
+        from: "emsender8@gmail.com", // Your sender email address
         to: recipient, // The recipient's email address
         subject: this.subject,
         html: this.content,

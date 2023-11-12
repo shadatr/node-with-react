@@ -22,11 +22,9 @@ const Footer = () => {
           <BsFacebook size={35} color="white" />
         </a>
         <a href="https://www.instagram.com/">
-          {" "}
           <AiFillInstagram size={40} color="white" />
         </a>
         <a href="https://www.twitter.com/">
-          {" "}
           <AiFillTwitterCircle size={40} color="white" />
         </a>
 
